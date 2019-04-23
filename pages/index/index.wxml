@@ -9,5 +9,6 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+    <text>第一次修改提交代码</text>
   </view>
 </view>

@@ -1,8 +1,46 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+page{
+  background: #f3f3f3;
 }
-.log-item {
-  margin: 10rpx;
+image{
+  display: block;
+  width: 100%;
+  height: 340rpx;
+}
+
+.block-item{
+   background: #fff;
+   margin-top: 15rpx;
+}
+.block-title{
+  position: relative;
+  font-size: 34rpx;
+  color: #1296db;
+  padding-left: 40rpx;
+  line-height: 1.5;
+}
+.block-title::after{
+  content:" ";
+  position: absolute;
+  left: 10rpx;
+  top: 4rpx;
+  width: 10rpx;
+  height: 40rpx;
+  background: #1296db;
+}
+.block-desc{
+  display: block;
+  padding: 0 30rpx 30rpx 30rpx;
+  font-size: 30rpx;
+}
+.footer{
+  margin-top: 15rpx;
+}
+button::after{
+  border:1px solid #1296db;
+}
+button{
+  display: inline-block;
+  width: 50%;
+  color: #1296db;
+  background:#fff;
 }

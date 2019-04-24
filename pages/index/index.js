@@ -12,48 +12,29 @@ Page({
     indicatorDots: true,
     autoplay: false,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    proList:[
+      {
+        logo: "/images/pro_01.jpg",
+        title: "一起来看好看的金玉姬",
+        desc: "金鱼姬是一条活泼好动的小鱼，一次偶然的机会，它在涨潮时被冲进了玻璃瓶中无法脱身。"
+    },
+      {
+        logo: "/images/pro_02.jpg",
+        title: "《崖上的波妞》",
+        desc: "是由宫崎骏导演、吉卜力工作室制作、长嶋一茂、天海佑希等人配音的长篇动画电影。"
+      },
+      {
+        logo: "/images/pro_03.jpeg",
+        title: "《悬崖上的金鱼公主》",
+        desc: "该片讲述了和母亲生活在悬崖上的5岁小男孩宗介和一只拥有魔法血统的金鱼之间的故事。"
+      }]
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  goDetail:function(e){
+    console.log(e.currentTarget.dataset.index)
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+  handleContact:function(e){
+    console.log(e.path)
+    console.log(e.query)
   }
 })

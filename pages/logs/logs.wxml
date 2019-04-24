@@ -1,6 +1,12 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<image src="/images/kiss.jpeg" />
+<view class="block">
+<view class="block-item" wx:for="{{blockList}}" data-index="{{index}}">
+    <view class="block-title">{{ item.title }}</view>
+    <text class="block-desc">{{ item.desc}}</text>
+</view>
+</view>
+<view class="footer">
+   <button open-type="contact">微信联系</button>
+   <button bindtap="phonecall">电话联系</button>
 </view>

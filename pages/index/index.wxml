@@ -12,3 +12,18 @@
     
   </block>
 </swiper>
+<view class = "item-list">
+   <view class="pro-item" wx:for="{{proList}}" bindtap='goDetail' data-index="{{index}}">
+      <image class="pro-title" src="{{item.logo}}" />
+      <view class="pro-body">
+        <view class="pro-tile">{{item.title}}</view>
+        <text class="pro-desc">{{item.desc}}</text>
+        <view class="pro-footer">
+          <image class="btn-detail" src="/images/btn_detail.png" />
+          <text class="btn-detail-desc">点击查看详情</text>
+          <image class="btn-ask" src="/images/btn_ask.png" />
+          <button class="btn-ask-desc" open-type="contact" bindcontact="handleContact"><text >点击进入客服</text></button>
+        </view>
+      </view>
+   </view>
+</view>

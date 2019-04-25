@@ -2,7 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/disc/disc"
+    "pages/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -20,7 +20,7 @@
     },
     {
       "pagePath": "pages/logs/logs",
-      "text": "加入",
+      "text": "我们",
       "iconPath": "images/ic_join_normal.png",
       "selectedIconPath": "images/ic_join_pressed.png"
     }]

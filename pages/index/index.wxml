@@ -5,7 +5,7 @@
   interval="{{interval}}"
   duration="{{duration}}"
 >
-  <block wx:for="{{imgUrls}}">
+  <block wx:for="{{imgUrls}}" wx:key="property">
     <swiper-item>
       <image src="{{item}}" class="slide-image" width="355" height="150" />
     </swiper-item>
@@ -13,7 +13,7 @@
   </block>
 </swiper>
 <view class = "item-list">
-   <view class="pro-item" wx:for="{{proList}}" bindtap='goDetail' data-index="{{index}}">
+   <view class="pro-item" wx:for="{{proList}}" wx:key="property" bindtap='goDetail' data-index="{{index}}">
       <image class="pro-title" src="{{item.logo}}" />
       <view class="pro-body">
         <view class="pro-tile">{{item.title}}</view>
